@@ -14,49 +14,49 @@ const services = [
     icon: BrainCircuit,
     title: "AI Knowledge Agents",
     description:
-      "Intelligent AI assistants trained on your business documents, SOPs, websites and internal knowledge.",
+      "Custom AI assistants trained on your business documents, SOPs, website, and internal knowledge to provide instant, accurate responses.",
   },
   {
     icon: Workflow,
     title: "Workflow Automation",
     description:
-      "Automate repetitive tasks, approvals, notifications and business operations using AI-powered workflows.",
+      "Eliminate repetitive manual tasks by automating approvals, notifications, data entry, and business processes across your organization.",
   },
   {
     icon: Users,
     title: "HR Automation",
     description:
-      "Recruitment, onboarding, leave management, employee records and approval workflows.",
+      "Automate recruitment, onboarding, employee records, leave requests, approvals, and other HR operations.",
   },
   {
     icon: GraduationCap,
     title: "Education Automation",
     description:
-      "Student registration, payments, attendance tracking and learning management automation.",
+      "Modernize school operations with automated admissions, student registration, attendance, payments, and learning workflows.",
   },
   {
     icon: Building2,
     title: "Estate Automation",
     description:
-      "Resident registration, visitor management, security workflows and estate operations.",
+      "Digitize estate management with resident registration, visitor management, security workflows, maintenance requests, and payment tracking.",
   },
   {
     icon: CreditCard,
     title: "Finance Automation",
     description:
-      "Paystack, Flutterwave, invoicing, payment verification and reporting.",
+      "Integrate Paystack, Flutterwave, invoicing, payment verification, financial reporting, and automated reconciliation.",
   },
   {
     icon: UtensilsCrossed,
     title: "Restaurant AI",
     description:
-      "Voice AI, reservations, menu assistants, ordering and customer support.",
+      "Deploy AI-powered ordering, reservations, customer support, menu assistants, and restaurant workflow automation.",
   },
   {
     icon: BarChart3,
     title: "Business Intelligence",
     description:
-      "Executive dashboards, KPI tracking, reporting and business analytics.",
+      "Build executive dashboards, KPI reporting, analytics, and real-time insights to support better business decisions.",
   },
 ];
 
@@ -64,22 +64,25 @@ export default function Services() {
   return (
     <section className="mx-auto max-w-7xl px-6 py-32">
       <div className="text-center">
+
         <p className="font-semibold uppercase tracking-[0.25em] text-blue-400">
-          Solutions
+          Services
         </p>
 
         <h2 className="mt-4 text-4xl font-bold md:text-5xl">
-          Solutions Designed Around Your Business
+          AI Services That Transform Businesses
         </h2>
 
         <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-gray-400">
-          Every organization has unique operational challenges. I design tailored AI
-and automation solutions that streamline processes, improve efficiency,
-reduce costs, and help teams achieve more with less effort.
+          I help businesses eliminate repetitive work, improve productivity,
+          reduce operational costs, and scale efficiently through practical AI
+          solutions and intelligent workflow automation.
         </p>
+
       </div>
 
       <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+
         {services.map((service) => {
           const Icon = service.icon;
 
@@ -101,9 +104,11 @@ reduce costs, and help teams achieve more with less effort.
               <button className="mt-8 font-semibold text-blue-400 hover:text-blue-300">
                 Learn More →
               </button>
+
             </div>
           );
         })}
+
       </div>
     </section>
   );

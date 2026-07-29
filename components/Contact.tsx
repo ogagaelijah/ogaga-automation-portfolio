@@ -1,5 +1,4 @@
 import {
-  CalendarDays,
   Mail,
   Phone,
   MapPin,
@@ -8,139 +7,111 @@ import {
 
 export default function Contact() {
   return (
-    <section className="mx-auto max-w-7xl px-6 py-32">
+    <section id="contact" className="py-28 px-6 bg-[#050816]">
 
-      <div className="rounded-3xl border border-white/10 bg-slate-900 p-12">
+      <div className="max-w-5xl mx-auto text-center">
 
-        <div className="grid gap-16 lg:grid-cols-2">
+        <p className="uppercase tracking-[0.3em] text-blue-400 font-semibold">
+          Let's Build Something Amazing
+        </p>
 
-          {/* Left Side */}
+        <h2 className="mt-4 text-4xl md:text-5xl font-bold">
+          Ready to Automate Your Business?
+        </h2>
 
-          <div>
+        <p className="mt-6 text-lg leading-8 text-slate-400 max-w-3xl mx-auto">
+          Whether you're looking to automate repetitive tasks, build AI-powered
+          business systems, or modernize your operations, I'd love to discuss
+          your project. Let's turn your ideas into reliable, scalable AI
+          solutions.
+        </p>
 
-            <p className="font-semibold uppercase tracking-[0.25em] text-blue-400">
-              Book a Discovery Call
-            </p>
+        <div className="mt-16 grid gap-6 md:grid-cols-3">
 
-            <h2 className="mt-4 text-5xl font-bold">
-              Let's Build Smarter Business Systems Together
-            </h2>
+          <a
+            href="mailto:ogagaokeelijah@gmail.com"
+            className="rounded-2xl border border-slate-800 bg-slate-900 p-8 hover:border-blue-500 transition duration-300"
+          >
+            <Mail className="mx-auto text-blue-400" size={42} />
 
-            <p className="mt-8 text-lg leading-8 text-gray-400">
-              Whether you're looking to automate repetitive processes, deploy AI
-              agents, improve customer experience, or transform your business
-              operations, I'd love to learn more about your goals.
-            </p>
-
-            <div className="mt-12 space-y-8">
-
-              <div className="flex items-center gap-4">
-
-                <Mail className="text-blue-400" size={26} />
-
-                <div>
-                  <p className="font-semibold">
-                    Email
-                  </p>
-
-                  <a
-  href="mailto:ogagaokeelijah@gmail.com"
-  className="text-gray-400 hover:text-blue-400 transition"
->
-  ogagaokeelijah@gmail.com
-</a>
-
-                </div>
-
-              </div>
-
-              <div className="flex items-center gap-4">
-
-                <Phone className="text-blue-400" size={26} />
-
-                <div>
-
-                  <p className="font-semibold">
-                    Phone
-                  </p>
-
-                 <a
-  href="tel:+2347033621133"
-  className="text-gray-400 hover:text-blue-400 transition"
->
-  +234 703 362 1133
-</a>
-
-                </div>
-
-              </div>
-
-              <div className="flex items-center gap-4">
-
-                <MapPin className="text-blue-400" size={26} />
-
-                <div>
-
-                  <p className="font-semibold">
-                    Location
-                  </p>
-
-                 <p className="text-gray-400">
-  Port Harcourt, Nigeria • Available for Remote Projects Worldwide
-</p>
-
-                </div>
-
-              </div>
-
-            </div>
-
-          </div>
-
-          {/* Right Side */}
-
-          <div className="rounded-2xl bg-[#111827] p-10">
-
-            <CalendarDays
-              size={48}
-              className="text-blue-400"
-            />
-
-            <h3 className="mt-8 text-3xl font-bold">
-              Schedule a Free Discovery Call
+            <h3 className="mt-5 text-xl font-semibold">
+              Email
             </h3>
 
-            <p className="mt-6 leading-8 text-gray-400">
-              In a 30-minute strategy session we'll discuss your current
-              business processes, identify automation opportunities, and explore
-              practical AI solutions tailored to your organization.
+            <p className="mt-3 text-slate-400 break-all">
+              ogagaokeelijah@gmail.com
             </p>
+          </a>
 
-            <ul className="mt-8 space-y-4 text-gray-300">
+          <a
+            href="tel:+2347033621133"
+            className="rounded-2xl border border-slate-800 bg-slate-900 p-8 hover:border-blue-500 transition duration-300"
+          >
+            <Phone className="mx-auto text-blue-400" size={42} />
 
-              <li>✓ Business Process Review</li>
+            <h3 className="mt-5 text-xl font-semibold">
+              Phone
+            </h3>
 
-              <li>✓ AI Opportunity Assessment</li>
+            <p className="mt-3 text-slate-400">
+              +234 703 362 1133
+            </p>
+          </a>
 
-              <li>✓ Automation Strategy</li>
+          <div className="rounded-2xl border border-slate-800 bg-slate-900 p-8">
+            <MapPin className="mx-auto text-blue-400" size={42} />
 
-              <li>✓ Technology Recommendations</li>
+            <h3 className="mt-5 text-xl font-semibold">
+              Location
+            </h3>
 
-              <li>✓ Implementation Roadmap</li>
-
-            </ul>
-
-            <button className="mt-10 flex w-full items-center justify-center gap-2 rounded-xl bg-blue-600 py-4 text-lg font-semibold transition hover:bg-blue-700">
-
-              Book My Free Call
-
-              <ArrowRight size={20} />
-
-            </button>
-
+            <p className="mt-3 text-slate-400">
+              Port Harcourt, Nigeria
+              <br />
+              Available for Remote Projects Worldwide
+            </p>
           </div>
 
         </div>
+
+        <div className="mt-14 flex flex-wrap justify-center gap-5">
+
+          <a
+            href="https://www.linkedin.com/in/ogaga-oke-elijah-52b561393"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-full border border-slate-700 px-6 py-3 hover:border-blue-500 transition"
+          >
+            LinkedIn
+          </a>
+
+          <a
+            href="https://github.com/ogagaelijah"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-full border border-slate-700 px-6 py-3 hover:border-blue-500 transition"
+          >
+            GitHub
+          </a>
+
+          <a
+            href="https://x.com/HyperAICrypto"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-full border border-slate-700 px-6 py-3 hover:border-blue-500 transition"
+          >
+            X (Twitter)
+          </a>
+
+        </div>
+
+        <a
+          href="mailto:ogagaokeelijah@gmail.com"
+          className="inline-flex items-center gap-3 mt-16 rounded-xl bg-blue-600 px-8 py-4 font-semibold text-white hover:bg-blue-700 transition"
+        >
+          Book a Free Discovery Call
+          <ArrowRight size={20} />
+        </a>
 
       </div>
 

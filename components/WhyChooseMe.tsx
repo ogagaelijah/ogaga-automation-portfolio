@@ -10,55 +10,59 @@ const reasons = [
     icon: BrainCircuit,
     title: "Business-First AI Strategy",
     description:
-      "I don't automate for the sake of automation. Every solution begins with understanding your business objectives and identifying where AI can create measurable business value.",
+      "Every automation project begins with understanding your business goals. I identify opportunities where AI delivers measurable value instead of simply automating existing processes.",
   },
   {
     icon: BriefcaseBusiness,
-    title: "From Strategy to Execution",
+    title: "End-to-End Implementation",
     description:
-      "From initial discovery and process mapping to deployment and continuous optimization, I deliver complete AI automation solutions that your team can confidently adopt and scale.",
+      "From discovery and process mapping to deployment and optimization, I build complete AI automation systems that integrate seamlessly into your business.",
   },
   {
     icon: BadgeCheck,
-    title: "Reliable & Scalable Systems",
+    title: "Reliable & Scalable Solutions",
     description:
-      "Every workflow is built with reliability, security, documentation, and future growth in mind—not just quick fixes.",
+      "My solutions are designed with security, reliability, documentation, and future growth in mind—so they continue delivering value as your business expands.",
   },
   {
     icon: Handshake,
     title: "Long-Term Partnership",
     description:
-      "Successful automation doesn't end after deployment. I provide ongoing support, optimization, and continuous improvements as your business evolves.",
+      "I don't disappear after deployment. I provide continuous support, improvements, and optimization to ensure your automation evolves with your business.",
   },
 ];
 
 export default function WhyChooseMe() {
   return (
     <section className="mx-auto max-w-7xl px-6 py-32">
+
       <div className="text-center">
+
         <p className="font-semibold uppercase tracking-[0.25em] text-blue-400">
-          Why Businesses Trust Me
+          Why Choose Me
         </p>
 
         <h2 className="mt-4 text-4xl font-bold md:text-5xl">
-          More Than Automation—A Strategic Technology Partner
+          Your Strategic AI Automation Partner
         </h2>
 
         <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-gray-400">
-          My goal isn't simply to automate tasks. I partner with businesses to
-          understand their operations, identify opportunities for improvement,
-          and deliver AI solutions that create measurable long-term value.
+          Choosing the right automation partner is just as important as choosing
+          the right technology. I build intelligent systems that are practical,
+          scalable, and focused on delivering measurable business results.
         </p>
+
       </div>
 
       <div className="mt-16 grid gap-8 md:grid-cols-2">
+
         {reasons.map((reason) => {
           const Icon = reason.icon;
 
           return (
             <div
               key={reason.title}
-              className="rounded-2xl border border-white/10 bg-slate-900 p-8 transition-all duration-300 hover:-translate-y-2 hover:border-blue-500 hover:shadow-xl"
+              className="rounded-2xl border border-white/10 bg-slate-900 p-8 transition duration-300 hover:-translate-y-2 hover:border-blue-500 hover:shadow-xl"
             >
               <Icon size={42} className="text-blue-400" />
 
@@ -72,7 +76,9 @@ export default function WhyChooseMe() {
             </div>
           );
         })}
+
       </div>
+
     </section>
   );
 }

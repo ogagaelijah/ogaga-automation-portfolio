@@ -1,136 +1,136 @@
+import {
+  GraduationCap,
+  UtensilsCrossed,
+  Building2,
+  Dumbbell,
+} from "lucide-react";
+
+const caseStudies = [
+  {
+    icon: GraduationCap,
+    title: "Hyperlog Academy",
+    problem:
+      "Manual student registration, payment verification, and course delivery slowed down enrollment.",
+    solution:
+      "Designed an AI-powered registration workflow integrating online forms, payment verification, automated emails, and student onboarding.",
+    result:
+      "Reduced manual administrative work while creating a faster, more professional enrollment experience.",
+  },
+  {
+    icon: UtensilsCrossed,
+    title: "Restaurant AI Assistant",
+    problem:
+      "Restaurants lose orders and customer inquiries because staff cannot answer every call during busy hours.",
+    solution:
+      "Built an AI voice assistant capable of answering calls, taking reservations, responding to menu questions, and capturing customer information automatically.",
+    result:
+      "Improved customer response time while allowing restaurant staff to focus on food preparation and service.",
+  },
+  {
+    icon: Building2,
+    title: "Estate Management Automation",
+    problem:
+      "Resident registration, visitor management, and security processes relied heavily on paperwork and manual approvals.",
+    solution:
+      "Developed an automation workflow for resident onboarding, visitor registration, payment tracking, and security notifications.",
+    result:
+      "Improved operational efficiency while reducing paperwork and administrative delays.",
+  },
+  {
+    icon: Dumbbell,
+    title: "Hyperlog Fitness Centre",
+    problem:
+      "Membership registration and renewal tracking were handled manually, leading to missed renewals and administrative overhead.",
+    solution:
+      "Designed an automated membership system with online registration, expiry tracking, renewal reminders, and centralized member records.",
+    result:
+      "Created a streamlined membership management process with automated reminders and improved record keeping.",
+  },
+];
+
 export default function CaseStudies() {
-  const projects = [
-    {
-      title: "AI Knowledge Agent",
-      industry: "Business Operations",
-      problem:
-        "Employees wasted hours searching through documents, SOPs, and PDFs for internal information.",
-      solution:
-        "Built an AI-powered knowledge assistant capable of answering questions instantly using company documents.",
-      results: [
-        "Instant document search",
-        "Reduced repetitive questions",
-        "Improved employee productivity",
-      ],
-      technologies: "OpenAI • n8n • Supabase",
-    },
-
-    {
-      title: "HR Automation System",
-      industry: "Human Resources",
-      problem:
-        "Recruitment, onboarding, and employee records were managed manually.",
-      solution:
-        "Designed an automated HR workflow for recruitment, onboarding, approvals, and employee lifecycle management.",
-      results: [
-        "Faster onboarding",
-        "Automated approvals",
-        "Centralized employee records",
-      ],
-      technologies: "n8n • Airtable • Gmail",
-    },
-
-    {
-      title: "Estate Management Automation",
-      industry: "Real Estate",
-      problem:
-        "Resident registration and visitor management relied on manual processes.",
-      solution:
-        "Developed a digital workflow for resident registration, visitor approvals, payment tracking, and estate operations.",
-      results: [
-        "Improved security",
-        "Digital resident records",
-        "Faster visitor approvals",
-      ],
-      technologies: "n8n • Airtable • Paystack",
-    },
-  ];
-
   return (
-    <section className="mx-auto max-w-7xl px-6 py-32">
+    <section className="mx-auto max-w-7xl px-6 py-28">
+
       <div className="text-center">
-        <p className="font-semibold uppercase tracking-[0.25em] text-blue-400">
+
+        <p className="uppercase tracking-[0.3em] text-blue-400 font-semibold">
           Case Studies
         </p>
 
-        <h2 className="mt-4 text-5xl font-bold">
-          Real AI Solutions for Real Businesses
+        <h2 className="mt-4 text-4xl md:text-5xl font-bold">
+          Real AI Automation Projects
         </h2>
 
-        <p className="mx-auto mt-6 max-w-3xl text-lg text-gray-400">
-          Here are some examples of how I design intelligent automation systems
-          that solve operational challenges and improve business performance.
+        <p className="mt-6 max-w-3xl mx-auto text-lg leading-8 text-gray-400">
+          Every automation project begins with understanding a business problem.
+          Here are examples of AI systems and workflow automations designed to
+          improve operations across different industries.
         </p>
+
       </div>
 
-      <div className="mt-16 space-y-10">
-        {projects.map((project) => (
-          <div
-            key={project.title}
-            className="rounded-3xl border border-white/10 bg-slate-900 p-10"
-          >
-            <div className="flex flex-col gap-6 lg:flex-row lg:justify-between">
-              <div className="max-w-3xl">
-                <p className="text-blue-400 font-semibold">
-                  {project.industry}
-                </p>
+      <div className="grid gap-8 mt-16 md:grid-cols-2">
 
-                <h3 className="mt-2 text-3xl font-bold">
-                  {project.title}
-                </h3>
+        {caseStudies.map((project) => {
 
-                <div className="mt-8 space-y-6">
-                  <div>
-                    <h4 className="font-semibold text-white">
-                      Challenge
-                    </h4>
+          const Icon = project.icon;
 
-                    <p className="mt-2 text-gray-400">
-                      {project.problem}
-                    </p>
-                  </div>
+          return (
 
-                  <div>
-                    <h4 className="font-semibold text-white">
-                      Solution
-                    </h4>
+            <div
+              key={project.title}
+              className="rounded-2xl border border-white/10 bg-slate-900 p-8 transition duration-300 hover:-translate-y-2 hover:border-blue-500 hover:shadow-xl"
+            >
 
-                    <p className="mt-2 text-gray-400">
-                      {project.solution}
-                    </p>
-                  </div>
+              <Icon size={42} className="text-blue-400" />
 
-                  <div>
-                    <h4 className="font-semibold text-white">
-                      Business Impact
-                    </h4>
+              <h3 className="mt-6 text-2xl font-bold">
+                {project.title}
+              </h3>
 
-                    <ul className="mt-2 space-y-2 text-gray-400">
-                      {project.results.map((item) => (
-                        <li key={item}>✓ {item}</li>
-                      ))}
-                    </ul>
-                  </div>
+              <div className="mt-6 space-y-5">
+
+                <div>
+                  <h4 className="font-semibold text-red-400">
+                    Problem
+                  </h4>
+
+                  <p className="mt-2 text-gray-400 leading-7">
+                    {project.problem}
+                  </p>
                 </div>
+
+                <div>
+                  <h4 className="font-semibold text-yellow-400">
+                    Solution
+                  </h4>
+
+                  <p className="mt-2 text-gray-400 leading-7">
+                    {project.solution}
+                  </p>
+                </div>
+
+                <div>
+                  <h4 className="font-semibold text-green-400">
+                    Result
+                  </h4>
+
+                  <p className="mt-2 text-gray-400 leading-7">
+                    {project.result}
+                  </p>
+                </div>
+
               </div>
 
-              <div className="rounded-2xl bg-slate-800 p-6 lg:w-72">
-                <p className="text-sm uppercase tracking-widest text-blue-400">
-                  Technologies
-                </p>
-
-                <p className="mt-4 text-lg font-semibold">
-                  {project.technologies}
-                </p>
-
-                <button className="mt-10 w-full rounded-xl bg-blue-600 py-3 font-semibold transition hover:bg-blue-700">
-                  View Workflow
-                </button>
-              </div>
             </div>
-          </div>
-        ))}
+
+          );
+
+        })}
+
       </div>
+
     </section>
   );
 }

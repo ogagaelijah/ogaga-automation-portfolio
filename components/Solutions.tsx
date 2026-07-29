@@ -1,88 +1,116 @@
-export default function Solutions() {
-  const solutions = [
-    {
-      title: "AI Knowledge Agents",
-      description:
-        "Intelligent AI assistants trained on your business documents, SOPs, websites, and internal knowledge.",
-    },
-    {
-      title: "Workflow Automation",
-      description:
-        "Automate repetitive tasks, approvals, notifications, and business operations using AI-powered workflows.",
-    },
-    {
-      title: "HR Automation",
-      description:
-        "Recruitment, onboarding, leave management, employee records, and approval workflows.",
-    },
-    {
-      title: "Education Automation",
-      description:
-        "Student registration, payments, attendance tracking, and learning management automation.",
-    },
-    {
-      title: "Estate Automation",
-      description:
-        "Resident registration, visitor management, security workflows, and estate operations.",
-    },
-    {
-      title: "Finance Automation",
-      description:
-        "Paystack, Flutterwave, invoicing, payment verification, and financial reporting.",
-    },
-    {
-      title: "Restaurant AI",
-      description:
-        "Voice AI, reservations, ordering systems, menu assistants, and customer support automation.",
-    },
-    {
-      title: "Business Intelligence",
-      description:
-        "Executive dashboards, KPI tracking, reporting, analytics, and business insights.",
-    },
-  ];
+import {
+  GraduationCap,
+  Building2,
+  UtensilsCrossed,
+  Landmark,
+  HeartPulse,
+  ShoppingCart,
+  Factory,
+  BriefcaseBusiness,
+} from "lucide-react";
 
+const industries = [
+  {
+    icon: GraduationCap,
+    title: "Education",
+    description:
+      "Student registration, online admissions, attendance tracking, fee management, LMS integration, and automated communication.",
+  },
+  {
+    icon: UtensilsCrossed,
+    title: "Restaurants",
+    description:
+      "AI ordering assistants, reservations, menu chatbots, delivery workflows, customer support, and kitchen automation.",
+  },
+  {
+    icon: Building2,
+    title: "Estate Management",
+    description:
+      "Resident registration, visitor management, security workflows, maintenance requests, and payment automation.",
+  },
+  {
+    icon: Landmark,
+    title: "Finance",
+    description:
+      "Payment verification, invoicing, Paystack & Flutterwave integration, reconciliation, and financial reporting.",
+  },
+  {
+    icon: HeartPulse,
+    title: "Healthcare",
+    description:
+      "Appointment scheduling, patient onboarding, records management, reminders, and AI-powered support assistants.",
+  },
+  {
+    icon: ShoppingCart,
+    title: "Retail & E-commerce",
+    description:
+      "Order processing, inventory updates, customer support, CRM automation, and marketing workflows.",
+  },
+  {
+    icon: Factory,
+    title: "Manufacturing",
+    description:
+      "Production tracking, quality reporting, inventory automation, and operational dashboards.",
+  },
+  {
+    icon: BriefcaseBusiness,
+    title: "Professional Services",
+    description:
+      "Lead management, client onboarding, document automation, CRM integration, and reporting dashboards.",
+  },
+];
+
+export default function Solutions() {
   return (
-    <section id="services" className="bg-[#050816] py-24 px-6">
+    <section className="bg-[#050816] py-28 px-6">
       <div className="max-w-7xl mx-auto">
 
-        <div className="text-center mb-16">
-          <p className="text-blue-400 font-semibold uppercase tracking-widest">
-            Solutions
+        <div className="text-center">
+
+          <p className="uppercase tracking-[0.3em] text-blue-400 font-semibold">
+            Industries
           </p>
 
-          <h2 className="text-4xl md:text-5xl font-bold mt-4">
-            Solutions Designed Around Your Business
+          <h2 className="mt-4 text-4xl md:text-5xl font-bold">
+            AI Solutions Tailored For Every Industry
           </h2>
 
-          <p className="text-slate-400 mt-6 max-w-3xl mx-auto leading-8">
-            Every organization has unique operational challenges. I design
-            tailored AI and automation solutions that streamline processes,
-            improve efficiency, reduce costs, and help teams achieve more with
-            less effort.
+          <p className="mt-6 max-w-3xl mx-auto text-slate-400 leading-8 text-lg">
+            Every industry operates differently. I design AI-powered automation
+            systems that solve operational challenges, eliminate repetitive
+            tasks, and improve productivity across multiple sectors.
           </p>
+
         </div>
 
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
 
-          {solutions.map((solution) => (
-            <div
-              key={solution.title}
-              className="bg-slate-900 border border-slate-800 rounded-2xl p-8 hover:border-blue-500 transition duration-300 hover:-translate-y-2"
-            >
-              <h3 className="text-xl font-semibold mb-4">
-                {solution.title}
-              </h3>
+          {industries.map((industry) => {
 
-              <p className="text-slate-400 leading-7">
-                {solution.description}
-              </p>
+            const Icon = industry.icon;
 
-              <button className="mt-6 text-blue-400 hover:text-blue-300 font-semibold">
-                Learn More →
-              </button>
-            </div>
-          ))}
+            return (
+
+              <div
+                key={industry.title}
+                className="rounded-2xl border border-slate-800 bg-slate-900 p-8 transition duration-300 hover:-translate-y-2 hover:border-blue-500 hover:shadow-xl"
+              >
+
+                <Icon size={42} className="text-blue-400" />
+
+                <h3 className="mt-6 text-xl font-bold">
+                  {industry.title}
+                </h3>
+
+                <p className="mt-4 text-slate-400 leading-7">
+                  {industry.description}
+                </p>
+
+              </div>
+
+            );
+
+          })}
 
         </div>
 

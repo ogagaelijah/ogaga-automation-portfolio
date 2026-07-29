@@ -8,77 +8,85 @@ import {
 const outcomes = [
   {
     icon: Clock3,
-    title: "Save Valuable Time",
+    title: "Save Hundreds of Hours",
     description:
-      "Automate repetitive tasks and free your team to focus on strategic, high-impact work.",
+      "Replace repetitive manual work with intelligent automation so your team can focus on high-value activities that grow the business.",
   },
   {
     icon: DollarSign,
-    title: "Reduce Operational Costs",
+    title: "Reduce Operating Costs",
     description:
-      "Eliminate manual processes, reduce costly errors, and improve overall efficiency.",
+      "Lower administrative expenses, eliminate duplicated effort, and improve operational efficiency with AI-powered workflows.",
   },
   {
     icon: TrendingUp,
-    title: "Scale With Confidence",
+    title: "Scale Without Increasing Headcount",
     description:
-      "Build automation systems that grow alongside your business without increasing complexity.",
+      "Build systems that continue working as your business grows, allowing you to serve more customers without proportional increases in staff.",
   },
   {
     icon: ShieldCheck,
-    title: "Reliable & Secure",
+    title: "Improve Accuracy & Compliance",
     description:
-      "Workflows designed with reliability, privacy, and human oversight where it matters most.",
+      "Reduce human error with standardized workflows, automated validations, and consistent business processes.",
   },
 ];
 
 export default function BusinessOutcomes() {
   return (
-    <section className="mx-auto max-w-7xl px-6 py-32">
+    <section className="py-28 px-6 bg-slate-950">
+      <div className="max-w-7xl mx-auto">
 
-      <div className="text-center">
+        <div className="text-center">
 
-        <p className="font-semibold uppercase tracking-[0.25em] text-blue-400">
-          Business Outcomes
-        </p>
+          <p className="uppercase tracking-[0.3em] text-blue-400 font-semibold">
+            Business Outcomes
+          </p>
 
-        <h2 className="mt-4 text-4xl font-bold md:text-5xl">
-          Technology That Delivers Business Value
-        </h2>
+          <h2 className="mt-4 text-4xl md:text-5xl font-bold">
+            AI That Delivers Real Business Results
+          </h2>
 
-        <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-gray-400">
-          AI is only valuable when it creates measurable results. Every solution
-          I build is designed to improve productivity, reduce operational
-          friction, and support long-term business growth.
-        </p>
+          <p className="mt-6 max-w-3xl mx-auto text-lg leading-8 text-slate-400">
+            Technology is only valuable when it produces measurable outcomes.
+            Every automation I build is designed to improve efficiency,
+            reduce costs, and help businesses grow with confidence.
+          </p>
+
+        </div>
+
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4 mt-16">
+
+          {outcomes.map((item) => {
+
+            const Icon = item.icon;
+
+            return (
+
+              <div
+                key={item.title}
+                className="rounded-2xl border border-slate-800 bg-slate-900 p-8 hover:border-blue-500 transition duration-300 hover:-translate-y-2"
+              >
+
+                <Icon size={44} className="text-blue-400" />
+
+                <h3 className="mt-6 text-xl font-bold">
+                  {item.title}
+                </h3>
+
+                <p className="mt-4 text-slate-400 leading-7">
+                  {item.description}
+                </p>
+
+              </div>
+
+            );
+
+          })}
+
+        </div>
 
       </div>
-
-      <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-
-        {outcomes.map((item) => {
-          const Icon = item.icon;
-
-          return (
-            <div
-              key={item.title}
-              className="rounded-2xl border border-white/10 bg-slate-900 p-8 transition duration-300 hover:-translate-y-2 hover:border-blue-500"
-            >
-              <Icon size={42} className="text-blue-400" />
-
-              <h3 className="mt-6 text-xl font-bold">
-                {item.title}
-              </h3>
-
-              <p className="mt-4 leading-7 text-gray-400">
-                {item.description}
-              </p>
-            </div>
-          );
-        })}
-
-      </div>
-
     </section>
   );
 }

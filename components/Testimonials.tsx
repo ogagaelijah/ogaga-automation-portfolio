@@ -1,73 +1,68 @@
-import { Star } from "lucide-react";
+import { Quote } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Sarah Johnson",
-    company: "Operations Manager",
-    review:
-      "Ogaga transformed one of our repetitive business processes into a fully automated workflow. Our team now saves several hours every week and can focus on more strategic work.",
+    title: "Built for Real Business Problems",
+    text: "Every automation showcased in this portfolio was designed to solve practical operational challenges such as manual registrations, payment verification, customer support, workflow automation, and business process optimization.",
   },
   {
-    name: "Michael Brown",
-    company: "Business Owner",
-    review:
-      "The AI solution was designed around our business instead of forcing us to change our processes. Professional, reliable, and highly recommended.",
+    title: "Focused on Business Impact",
+    text: "Each solution prioritizes measurable outcomes including improved productivity, reduced manual work, better customer experience, and scalable operations instead of technology for its own sake.",
   },
   {
-    name: "Grace Williams",
-    company: "HR Director",
-    review:
-      "The HR automation system significantly improved our onboarding process and eliminated repetitive administrative work. Everything became faster and more organized.",
+    title: "Continuously Improving",
+    text: "This portfolio represents an evolving collection of AI automation systems. Every new project strengthens my experience in designing reliable, scalable, and business-focused automation solutions.",
   },
 ];
 
 export default function Testimonials() {
   return (
-    <section className="mx-auto max-w-7xl px-6 py-32">
-      <div className="text-center">
-        <p className="font-semibold uppercase tracking-[0.25em] text-blue-400">
-          Testimonials
-        </p>
+    <section className="bg-[#050816] py-28 px-6">
+      <div className="max-w-7xl mx-auto">
 
-        <h2 className="mt-4 text-5xl font-bold">
-          What Clients Say
-        </h2>
+        <div className="text-center">
 
-        <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-gray-400">
-          Building long-term partnerships means delivering solutions that create
-          real business value. Here's what clients have to say.
-        </p>
-      </div>
+          <p className="uppercase tracking-[0.3em] text-blue-400 font-semibold">
+            Portfolio Highlights
+          </p>
 
-      <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-        {testimonials.map((testimonial) => (
-          <div
-            key={testimonial.name}
-            className="rounded-3xl border border-white/10 bg-slate-900 p-8 transition duration-300 hover:-translate-y-2 hover:border-blue-500"
-          >
-            <div className="flex gap-1 text-yellow-400">
-              <Star fill="currentColor" size={18} />
-              <Star fill="currentColor" size={18} />
-              <Star fill="currentColor" size={18} />
-              <Star fill="currentColor" size={18} />
-              <Star fill="currentColor" size={18} />
-            </div>
+          <h2 className="mt-4 text-4xl md:text-5xl font-bold">
+            Building AI Solutions That Create Value
+          </h2>
 
-            <p className="mt-6 leading-8 text-gray-300">
-              "{testimonial.review}"
-            </p>
+          <p className="mt-6 max-w-3xl mx-auto text-lg leading-8 text-slate-400">
+            My focus is on solving business problems through intelligent
+            automation. As I complete more client projects, this section will
+            grow with real success stories and verified client feedback.
+          </p>
 
-            <div className="mt-8">
-              <h3 className="font-semibold text-xl">
-                {testimonial.name}
+        </div>
+
+        <div className="grid gap-8 mt-16 lg:grid-cols-3">
+
+          {testimonials.map((item) => (
+
+            <div
+              key={item.title}
+              className="rounded-2xl border border-slate-800 bg-slate-900 p-8 hover:border-blue-500 transition duration-300 hover:-translate-y-2"
+            >
+
+              <Quote size={40} className="text-blue-400" />
+
+              <h3 className="mt-6 text-2xl font-bold">
+                {item.title}
               </h3>
 
-              <p className="text-gray-400">
-                {testimonial.company}
+              <p className="mt-6 text-slate-400 leading-8">
+                {item.text}
               </p>
+
             </div>
-          </div>
-        ))}
+
+          ))}
+
+        </div>
+
       </div>
     </section>
   );
