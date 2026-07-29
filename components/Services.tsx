@@ -14,74 +14,79 @@ const services = [
     icon: BrainCircuit,
     title: "AI Knowledge Agents",
     description:
-      "Custom AI assistants trained on your business documents, SOPs, website, and internal knowledge to provide instant, accurate responses.",
+      "Custom AI assistants trained on your business documents, SOPs, websites, and internal knowledge to deliver fast, accurate, and context-aware responses.",
   },
   {
     icon: Workflow,
     title: "Workflow Automation",
     description:
-      "Eliminate repetitive manual tasks by automating approvals, notifications, data entry, and business processes across your organization.",
+      "Replace repetitive manual work with intelligent workflows that automate approvals, notifications, reporting, data synchronization, and business operations.",
   },
   {
     icon: Users,
     title: "HR Automation",
     description:
-      "Automate recruitment, onboarding, employee records, leave requests, approvals, and other HR operations.",
+      "Automate recruitment, employee onboarding, leave management, approvals, staff records, and internal HR processes.",
   },
   {
     icon: GraduationCap,
     title: "Education Automation",
     description:
-      "Modernize school operations with automated admissions, student registration, attendance, payments, and learning workflows.",
+      "Digitize admissions, student registration, attendance tracking, payments, examinations, and learning management workflows.",
   },
   {
     icon: Building2,
     title: "Estate Automation",
     description:
-      "Digitize estate management with resident registration, visitor management, security workflows, maintenance requests, and payment tracking.",
+      "Streamline resident registration, visitor management, maintenance requests, security workflows, and estate payment systems.",
   },
   {
     icon: CreditCard,
     title: "Finance Automation",
     description:
-      "Integrate Paystack, Flutterwave, invoicing, payment verification, financial reporting, and automated reconciliation.",
+      "Integrate Paystack, Flutterwave, invoicing, payment verification, reconciliation, and financial reporting into one automated workflow.",
   },
   {
     icon: UtensilsCrossed,
     title: "Restaurant AI",
     description:
-      "Deploy AI-powered ordering, reservations, customer support, menu assistants, and restaurant workflow automation.",
+      "Deploy AI-powered ordering, reservations, customer support, menu assistants, and voice-enabled restaurant automation.",
   },
   {
     icon: BarChart3,
     title: "Business Intelligence",
     description:
-      "Build executive dashboards, KPI reporting, analytics, and real-time insights to support better business decisions.",
+      "Create executive dashboards, KPI reporting, analytics, and real-time business insights for better decision-making.",
   },
 ];
 
 export default function Services() {
   return (
-    <section className="mx-auto max-w-7xl px-6 py-32">
-      <div className="text-center">
+    <section
+      id="services"
+      className="mx-auto max-w-7xl px-6 py-36 scroll-mt-24"
+    >
+      <div className="mb-24 text-center">
 
-        <p className="font-semibold uppercase tracking-[0.25em] text-blue-400">
+        <h2 className="text-4xl font-bold uppercase tracking-[0.35em] text-blue-400 md:text-5xl">
           Services
-        </p>
-
-        <h2 className="mt-4 text-4xl font-bold md:text-5xl">
-          AI Services That Transform Businesses
         </h2>
 
-        <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-gray-400">
-          I help businesses eliminate repetitive work, improve productivity,
-          reduce operational costs, and scale efficiently through practical AI
-          solutions and intelligent workflow automation.
+        <p className="mx-auto mt-8 max-w-4xl text-2xl font-semibold leading-relaxed text-white md:text-3xl">
+          AI Services That Transform Businesses
         </p>
+
+        <p className="mx-auto mt-8 max-w-3xl text-lg leading-8 text-gray-400">
+          I help organizations eliminate repetitive work, improve productivity,
+          reduce operational costs, and scale confidently through practical AI
+          systems and intelligent workflow automation.
+        </p>
+
+        <div className="mx-auto mt-10 h-1 w-28 rounded-full bg-blue-500"></div>
 
       </div>
 
-      <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
 
         {services.map((service) => {
           const Icon = service.icon;
@@ -89,22 +94,26 @@ export default function Services() {
           return (
             <div
               key={service.title}
-              className="rounded-2xl border border-white/10 bg-slate-900 p-8 transition duration-300 hover:-translate-y-2 hover:border-blue-500 hover:shadow-xl"
+              className="group rounded-2xl border border-white/10 bg-slate-900 p-8 transition-all duration-300 hover:-translate-y-2 hover:border-blue-500 hover:shadow-2xl"
             >
-              <Icon size={42} className="text-blue-400" />
+              <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-blue-500/10 transition-all duration-300 group-hover:bg-blue-500/20">
+                <Icon
+                  size={34}
+                  className="text-blue-400"
+                />
+              </div>
 
-              <h3 className="mt-6 text-xl font-bold">
+              <h3 className="mt-8 text-2xl font-bold text-white">
                 {service.title}
               </h3>
 
-              <p className="mt-4 leading-7 text-gray-400">
+              <p className="mt-5 leading-8 text-gray-400">
                 {service.description}
               </p>
 
-              <button className="mt-8 font-semibold text-blue-400 hover:text-blue-300">
+              <button className="mt-8 font-semibold text-blue-400 transition-all duration-300 group-hover:translate-x-2 group-hover:text-blue-300">
                 Learn More →
               </button>
-
             </div>
           );
         })}

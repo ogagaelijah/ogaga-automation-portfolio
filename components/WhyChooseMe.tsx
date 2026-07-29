@@ -34,15 +34,15 @@ const reasons = [
 
 export default function WhyChooseMe() {
   return (
-    <section className="mx-auto max-w-7xl px-6 py-32">
+    <section className="mx-auto max-w-7xl px-6 py-40">
 
-      <div className="text-center">
+      <div className="text-center mb-20">
 
-        <p className="font-semibold uppercase tracking-[0.25em] text-blue-400">
+        <p className="text-4xl md:text-5xl font-bold uppercase tracking-[0.25em] text-blue-400">
           Why Choose Me
         </p>
 
-        <h2 className="mt-4 text-4xl font-bold md:text-5xl">
+        <h2 className="mt-6 text-2xl md:text-3xl font-semibold text-white">
           Your Strategic AI Automation Partner
         </h2>
 
@@ -54,7 +54,7 @@ export default function WhyChooseMe() {
 
       </div>
 
-      <div className="mt-16 grid gap-8 md:grid-cols-2">
+      <div className="grid gap-8 md:grid-cols-2">
 
         {reasons.map((reason) => {
           const Icon = reason.icon;
@@ -66,7 +66,7 @@ export default function WhyChooseMe() {
             >
               <Icon size={42} className="text-blue-400" />
 
-              <h3 className="mt-6 text-2xl font-bold">
+              <h3 className="mt-6 text-2xl font-bold text-white">
                 {reason.title}
               </h3>
 

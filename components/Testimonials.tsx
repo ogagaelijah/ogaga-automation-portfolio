@@ -17,16 +17,16 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="bg-[#050816] py-28 px-6">
+    <section className="bg-[#050816] py-40 px-6">
       <div className="max-w-7xl mx-auto">
 
-        <div className="text-center">
+        <div className="text-center mb-20">
 
-          <p className="uppercase tracking-[0.3em] text-blue-400 font-semibold">
+          <p className="text-4xl md:text-5xl font-bold uppercase tracking-[0.25em] text-blue-400">
             Portfolio Highlights
           </p>
 
-          <h2 className="mt-4 text-4xl md:text-5xl font-bold">
+          <h2 className="mt-6 text-2xl md:text-3xl font-semibold text-white">
             Building AI Solutions That Create Value
           </h2>
 
@@ -38,18 +38,18 @@ export default function Testimonials() {
 
         </div>
 
-        <div className="grid gap-8 mt-16 lg:grid-cols-3">
+        <div className="grid gap-8 lg:grid-cols-3">
 
           {testimonials.map((item) => (
 
             <div
               key={item.title}
-              className="rounded-2xl border border-slate-800 bg-slate-900 p-8 hover:border-blue-500 transition duration-300 hover:-translate-y-2"
+              className="rounded-2xl border border-slate-800 bg-slate-900 p-8 transition duration-300 hover:-translate-y-2 hover:border-blue-500 hover:shadow-xl"
             >
 
               <Quote size={40} className="text-blue-400" />
 
-              <h3 className="mt-6 text-2xl font-bold">
+              <h3 className="mt-6 text-2xl font-bold text-white">
                 {item.title}
               </h3>
 

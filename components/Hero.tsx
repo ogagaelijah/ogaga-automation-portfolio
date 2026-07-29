@@ -5,136 +5,176 @@ export default function Hero() {
       className="relative overflow-hidden bg-[#08111f]"
     >
       {/* Background Glow */}
-      <div className="absolute left-0 top-0 h-96 w-96 rounded-full bg-blue-600/20 blur-3xl"></div>
-      <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-cyan-500/10 blur-3xl"></div>
 
-      <div className="relative mx-auto flex max-w-7xl flex-col items-center justify-between gap-16 px-6 py-28 lg:flex-row">
+      <div className="absolute -left-32 top-0 h-[420px] w-[420px] rounded-full bg-blue-600/20 blur-3xl"></div>
 
-        {/* LEFT CONTENT */}
+      <div className="absolute -right-24 bottom-0 h-[380px] w-[380px] rounded-full bg-cyan-500/10 blur-3xl"></div>
+
+      <div className="relative mx-auto flex max-w-7xl flex-col items-center gap-20 px-6 py-32 lg:flex-row lg:justify-between">
+
+        {/* LEFT SIDE */}
 
         <div className="max-w-2xl">
 
-          <span className="inline-flex items-center rounded-full border border-blue-500/30 bg-blue-500/10 px-5 py-2 text-sm font-medium text-blue-300">
+          <span className="inline-flex items-center rounded-full border border-blue-500/30 bg-blue-500/10 px-5 py-2 text-sm font-semibold text-blue-300">
             🚀 AI Automation Specialist & Consultant
           </span>
 
-          <h1 className="mt-8 text-5xl font-extrabold leading-tight text-white md:text-6xl">
+          <h1 className="mt-8 text-5xl font-extrabold leading-tight text-white md:text-6xl lg:text-7xl">
 
-            I Build AI Automation Systems That Help Businesses
+            I Build Intelligent
 
             <span className="block text-blue-500">
-              Scale Smarter.
+              AI Automation Systems
+            </span>
+
+            <span className="block">
+              That Help Businesses Scale Smarter.
             </span>
 
           </h1>
 
           <p className="mt-8 text-xl leading-9 text-gray-300">
 
-            I help businesses eliminate repetitive work, streamline operations,
-            and improve productivity by building intelligent AI Agents,
-            workflow automation systems, integrations, and business solutions
-            powered by modern AI technologies.
+            I help businesses eliminate repetitive work, automate
+            operations, integrate business applications, and deploy
+            intelligent AI systems that improve productivity,
+            reduce operating costs, and create exceptional customer
+            experiences.
 
           </p>
 
-          <div className="mt-10 flex flex-wrap gap-4">
+          <div className="mt-12 flex flex-wrap gap-5">
 
             <a
               href="#contact"
-              className="rounded-xl bg-blue-600 px-8 py-4 font-semibold text-white transition-all duration-300 hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-600/30"
+              className="rounded-xl bg-blue-600 px-8 py-4 font-semibold text-white transition duration-300 hover:-translate-y-1 hover:bg-blue-700 hover:shadow-xl hover:shadow-blue-600/30"
             >
               Book a Discovery Call
             </a>
 
             <a
               href="#case-studies"
-              className="rounded-xl border border-white/20 px-8 py-4 font-semibold text-white transition-all duration-300 hover:border-blue-500 hover:bg-white/5"
+              className="rounded-xl border border-white/20 px-8 py-4 font-semibold text-white transition duration-300 hover:border-blue-500 hover:bg-white/5"
             >
               Explore My Work
             </a>
 
           </div>
 
-          <div className="mt-10">
+          <div className="mt-14">
 
-            <p className="text-sm uppercase tracking-widest text-gray-500">
+            <p className="text-sm font-semibold uppercase tracking-[0.35em] text-gray-500">
               Trusted Technologies
             </p>
 
-            <p className="mt-3 text-gray-300 leading-8">
-              OpenAI • n8n • Supabase • Vapi • Airtable • Make • Zapier •
-              Google Workspace • REST APIs
+            <p className="mt-5 leading-9 text-gray-300">
+
+              OpenAI • Claude • n8n • Make • Zapier • Airtable •
+              Supabase • Vapi • Google Workspace • REST APIs
+
             </p>
 
           </div>
 
         </div>
 
-        {/* RIGHT CONTENT */}
+        {/* RIGHT SIDE */}
 
-        <div className="grid gap-6">
+        <div className="grid w-full max-w-md gap-6">
 
-          {/* Card 1 */}
+          {/* CARD 1 */}
 
-          <div className="rounded-2xl border border-green-500/20 bg-slate-900 p-7 shadow-lg">
+          <div className="rounded-3xl border border-green-500/20 bg-slate-900 p-8 shadow-xl">
 
-            <p className="text-sm uppercase tracking-wider text-gray-400">
+            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-gray-400">
               Availability
             </p>
 
-            <h3 className="mt-3 text-2xl font-bold text-green-400">
+            <h3 className="mt-4 text-2xl font-bold text-green-400">
               🟢 Available for Projects
             </h3>
 
-            <p className="mt-3 text-gray-400">
-              Currently accepting AI automation consulting and implementation
-              projects.
+            <p className="mt-4 leading-8 text-gray-400">
+
+              Currently accepting AI automation consulting,
+              workflow implementation,
+              AI integrations,
+              and intelligent business system projects.
+
             </p>
 
           </div>
+                    {/* CARD 2 */}
 
-          {/* Card 2 */}
+          <div className="rounded-3xl border border-white/10 bg-slate-900 p-8 shadow-xl">
 
-          <div className="rounded-2xl border border-white/10 bg-slate-900 p-7 shadow-lg">
-
-            <p className="text-sm uppercase tracking-wider text-gray-400">
+            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-gray-400">
               Specialization
             </p>
 
-            <h3 className="mt-3 text-2xl font-bold text-white">
-              AI Automation
+            <h3 className="mt-4 text-2xl font-bold text-white">
+              AI Automation Solutions
             </h3>
 
-            <p className="mt-3 leading-8 text-gray-400">
-              AI Agents<br />
-              Workflow Automation<br />
-              Business Integrations<br />
-              Process Optimization
-            </p>
+            <ul className="mt-6 space-y-4 text-gray-300">
+
+              <li className="font-semibold text-white">
+                • AI Agents
+              </li>
+
+              <li className="font-semibold text-white">
+                • Workflow Automation
+              </li>
+
+              <li className="font-semibold text-white">
+                • API Integrations
+              </li>
+
+              <li className="font-semibold text-white">
+                • Business Process Optimization
+              </li>
+
+              <li className="font-semibold text-white">
+                • AI Voice Assistants
+              </li>
+
+            </ul>
 
           </div>
 
-          {/* Card 3 */}
+          {/* CARD 3 */}
 
-          <div className="rounded-2xl border border-white/10 bg-slate-900 p-7 shadow-lg">
+          <div className="rounded-3xl border border-blue-500/20 bg-slate-900 p-8 shadow-xl">
 
-            <p className="text-sm uppercase tracking-wider text-gray-400">
-              Core Technology Stack
+            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-gray-400">
+              What You Gain
             </p>
 
-            <h3 className="mt-3 text-xl font-bold text-blue-400">
-              n8n • OpenAI
+            <h3 className="mt-4 text-2xl font-bold text-blue-400">
+              Business Results
             </h3>
 
-            <p className="mt-3 leading-8 text-gray-400">
-              Supabase • Vapi • Make • Zapier • Airtable • APIs
-            </p>
+            <ul className="mt-6 space-y-4 text-gray-300">
+
+              <li>✓ Less manual work</li>
+
+              <li>✓ Faster business operations</li>
+
+              <li>✓ Reduced operating costs</li>
+
+              <li>✓ Better customer experience</li>
+
+              <li>✓ Scalable AI systems</li>
+
+            </ul>
 
           </div>
 
         </div>
 
       </div>
+
     </section>
   );
 }

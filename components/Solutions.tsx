@@ -62,54 +62,65 @@ const industries = [
 
 export default function Solutions() {
   return (
-    <section className="bg-[#050816] py-28 px-6">
-      <div className="max-w-7xl mx-auto">
+    <section
+      id="solutions"
+      className="bg-[#050816] py-36 px-6 scroll-mt-24"
+    >
+      <div className="mx-auto max-w-7xl">
 
-        <div className="text-center">
+        {/* Section Heading */}
 
-          <p className="uppercase tracking-[0.3em] text-blue-400 font-semibold">
+        <div className="mb-24 text-center">
+
+          <h2 className="text-4xl font-bold uppercase tracking-[0.35em] text-blue-400 md:text-5xl">
             Industries
-          </p>
-
-          <h2 className="mt-4 text-4xl md:text-5xl font-bold">
-            AI Solutions Tailored For Every Industry
           </h2>
 
-          <p className="mt-6 max-w-3xl mx-auto text-slate-400 leading-8 text-lg">
-            Every industry operates differently. I design AI-powered automation
-            systems that solve operational challenges, eliminate repetitive
-            tasks, and improve productivity across multiple sectors.
+          <p className="mx-auto mt-8 max-w-4xl text-2xl font-semibold leading-relaxed text-white md:text-3xl">
+            AI Solutions Tailored for Every Industry
           </p>
+
+          <p className="mx-auto mt-8 max-w-3xl text-lg leading-8 text-gray-400">
+            Every industry has unique operational challenges. I design
+            intelligent AI systems and workflow automations that eliminate
+            repetitive tasks, improve productivity, and help organizations
+            operate more efficiently.
+          </p>
+
+          <div className="mx-auto mt-10 h-1 w-28 rounded-full bg-blue-500"></div>
 
         </div>
 
-        <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
 
           {industries.map((industry) => {
-
             const Icon = industry.icon;
 
             return (
-
               <div
                 key={industry.title}
-                className="rounded-2xl border border-slate-800 bg-slate-900 p-8 transition duration-300 hover:-translate-y-2 hover:border-blue-500 hover:shadow-xl"
+                className="group rounded-2xl border border-white/10 bg-slate-900 p-8 transition-all duration-300 hover:-translate-y-2 hover:border-blue-500 hover:shadow-2xl"
               >
 
-                <Icon size={42} className="text-blue-400" />
+                <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-blue-500/10 transition-all duration-300 group-hover:bg-blue-500/20">
 
-                <h3 className="mt-6 text-xl font-bold">
+                  <Icon
+                    size={34}
+                    className="text-blue-400"
+                  />
+
+                </div>
+
+                <h3 className="mt-8 text-2xl font-bold text-white">
                   {industry.title}
                 </h3>
 
-                <p className="mt-4 text-slate-400 leading-7">
+                <p className="mt-5 leading-8 text-gray-400">
                   {industry.description}
                 </p>
 
               </div>
-
             );
-
           })}
 
         </div>

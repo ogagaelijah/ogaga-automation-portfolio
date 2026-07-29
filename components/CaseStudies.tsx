@@ -161,54 +161,58 @@ export default function CaseStudies() {
   return (
     <section
       id="case-studies"
-      className="mx-auto max-w-7xl px-6 py-28"
+      className="mx-auto max-w-7xl px-6 py-36 scroll-mt-24"
     >
-      <div className="text-center">
+      <div className="mb-24 text-center">
 
-        <p className="font-semibold uppercase tracking-[0.3em] text-blue-400">
-          Featured Solutions
-        </p>
-
-        <h2 className="mt-4 text-4xl font-bold md:text-5xl">
+        <h2 className="text-4xl font-bold uppercase tracking-[0.35em] text-blue-400 md:text-5xl">
           Featured AI Solutions
         </h2>
 
-        <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-gray-400">
-          Every AI solution begins with solving a real business challenge. These
-          featured projects demonstrate how I combine AI, automation platforms,
-          APIs, and modern business systems to eliminate manual work, improve
-          productivity, and help organizations scale through intelligent automation.
+        <p className="mx-auto mt-8 max-w-4xl text-2xl font-semibold leading-relaxed text-white md:text-3xl">
+          Real AI Automation Projects That Solve Business Problems
         </p>
+
+        <p className="mx-auto mt-8 max-w-3xl text-lg leading-8 text-gray-400">
+          Every solution begins with understanding a business challenge. These
+          projects demonstrate how I combine AI, automation platforms, APIs,
+          and intelligent workflows to improve operations and create measurable
+          business value.
+        </p>
+
+        <div className="mx-auto mt-10 h-1 w-28 rounded-full bg-blue-500"></div>
 
       </div>
 
-      <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
 
         {caseStudies.map((project) => {
-
           const Icon = project.icon;
 
           return (
-
             <div
               key={project.title}
-              className="rounded-2xl border border-white/10 bg-slate-900 p-8 transition-all duration-300 hover:-translate-y-2 hover:border-blue-500 hover:shadow-xl"
+              className="group rounded-2xl border border-white/10 bg-slate-900 p-8 transition-all duration-300 hover:-translate-y-2 hover:border-blue-500 hover:shadow-2xl"
             >
 
-              <Icon
-                size={42}
-                className="text-blue-400"
-              />
+              <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-blue-500/10 transition-all duration-300 group-hover:bg-blue-500/20">
 
-              <h3 className="mt-6 text-2xl font-bold text-white">
+                <Icon
+                  size={34}
+                  className="text-blue-400"
+                />
+
+              </div>
+
+              <h3 className="mt-8 text-2xl font-bold text-white">
                 {project.title}
               </h3>
 
-              <div className="mt-3 inline-block rounded-full border border-blue-500/30 bg-blue-500/10 px-3 py-1 text-sm font-medium text-blue-300">
+              <div className="mt-4 inline-block rounded-full border border-blue-500/30 bg-blue-500/10 px-4 py-2 text-sm font-semibold text-blue-300">
                 {project.industry}
               </div>
 
-              <div className="mt-6 space-y-5">
+              <div className="mt-8 space-y-6">
 
                 <div>
                   <h4 className="font-semibold text-red-400">
@@ -250,7 +254,7 @@ export default function CaseStudies() {
                   </p>
                 </div>
 
-                <div className="rounded-xl border border-green-500/20 bg-green-500/10 px-4 py-3">
+                <div className="rounded-xl border border-green-500/20 bg-green-500/10 px-4 py-4">
 
                   <p className="font-semibold text-green-400">
                     ✓ {project.status}
@@ -261,9 +265,7 @@ export default function CaseStudies() {
               </div>
 
             </div>
-
           );
-
         })}
 
       </div>
