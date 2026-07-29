@@ -1,41 +1,62 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import TrustedTech from "@/components/TrustedTech";
-import Solutions from "@/components/Solutions";
+import About from "@/components/About";
 import Services from "@/components/Services";
+import Solutions from "@/components/Solutions";
 import BusinessOutcomes from "@/components/BusinessOutcomes";
 import CaseStudies from "@/components/CaseStudies";
 import WhyChooseMe from "@/components/WhyChooseMe";
-import Testimonials from "@/components/Testimonials";
 import Technologies from "@/components/Technologies";
+import TrustedTech from "@/components/TrustedTech";
+import Testimonials from "@/components/Testimonials";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
     <>
+      {/* ================= NAVIGATION ================= */}
       <Navbar />
 
-      <Hero />
+      {/* ================= MAIN CONTENT ================= */}
+      <main>
 
-      <TrustedTech />
+        {/* Hero Section */}
+        <Hero />
 
-      <Solutions />
+        {/* About Me */}
+        <About />
 
-      <Services />
+        {/* Services */}
+        <Services />
 
-      <BusinessOutcomes />
+        {/* Solutions */}
+        <Solutions />
 
-      <CaseStudies />
+        {/* Business Outcomes */}
+        <BusinessOutcomes />
 
-      <WhyChooseMe />
+        {/* Case Studies */}
+        <CaseStudies />
 
-      <Testimonials />
+        {/* Why Choose Me */}
+        <WhyChooseMe />
 
-      <Technologies />
+        {/* Technologies */}
+        <Technologies />
 
-      <Contact />
+        {/* Trusted Technology Stack */}
+        <TrustedTech />
 
+        {/* Client Testimonials */}
+        <Testimonials />
+
+        {/* Contact */}
+        <Contact />
+
+      </main>
+
+      {/* ================= FOOTER ================= */}
       <Footer />
     </>
   );
