@@ -1,5 +1,5 @@
-import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
+import Navbar from "@/components/NavbarV2";
+import Hero from "@/components/HeroV2";
 import TrustedTech from "@/components/TrustedTech";
 import About from "@/components/About";
 import Services from "@/components/Services";
@@ -14,18 +14,31 @@ import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#050816] text-white">
+
       <Navbar />
+
       <Hero />
+
       <TrustedTech />
+
       <About />
+
       <Services />
+
       <Solutions />
+
       <BusinessOutcomes />
+
       <CaseStudies />
+
       <WhyChooseMe />
+
       <Testimonials />
+
       <Contact />
+
       <Footer />
+
     </main>
   );
 }
